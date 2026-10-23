@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Private or large datasets
+sql-eda/*.csv
