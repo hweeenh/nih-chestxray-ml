@@ -21,7 +21,6 @@ The dataset was released by the National Institutes of Health (NIH).
 ### Files used
 
 Download the following files from the original dataset source:
-https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737
 
 | File | Purpose |
 |---|---|
@@ -30,7 +29,7 @@ https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737
 | `test_list.txt` | Official test image list |
 | `images_001.tar.gz` | Chest X-ray image archive (part 1) |
 
-**Original dataset source:** [Insert the exact webpage or download link you used]
+**Original dataset source:** [https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737]
 
 ### Dataset setup
 
