@@ -3,3 +3,16 @@
 
 # Private or large datasets
 sql-eda/*.csv
+
+# MLP project - downloaded datasets
+/mlp/data/
+
+# Python virtual environments
+**/.venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Jupyter generated files
+.ipynb_checkpoints/
