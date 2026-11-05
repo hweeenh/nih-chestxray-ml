@@ -3,9 +3,7 @@
 
 # Private or large datasets
 sql-eda/*.csv
-
-# MLP project - downloaded datasets
-/mlp/data/
+/data/
 
 # Python virtual environments
 **/.venv/
