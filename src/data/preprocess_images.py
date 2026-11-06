@@ -15,7 +15,7 @@ from PIL import Image
 from torchvision import transforms
 
 # 1. Paths
-PROJECT_DIR = Path(__file__).resolve().parents[1]
+PROJECT_DIR = Path(__file__).resolve().parents[2]
 IMAGE_DIR = PROJECT_DIR / "data" / "raw" / "images"
 CSV_PATH = PROJECT_DIR / "data" / "processed" / "mlp_dataset.csv"
 

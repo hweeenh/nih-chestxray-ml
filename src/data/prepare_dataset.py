@@ -12,12 +12,14 @@ import pandas as pd
 from sklearn.model_selection import StratifiedGroupKFold
 
 # 1. Define paths and settings
-DATA_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
-OUTPUT_DIR = Path(__file__).resolve().parents[1] / "data" / "processed"
+PROJECT_DIR = Path(__file__).resolve().parents[2]
+DATA_DIR = PROJECT_DIR / "data" / "raw"
+METADATA_DIR = PROJECT_DIR / "data" / "metadata"
+OUTPUT_DIR = PROJECT_DIR / "data" / "processed"
 
 CSV_PATH = DATA_DIR / "Data_Entry_2017_v2020.csv"
-TRAIN_VAL_PATH = DATA_DIR / "train_val_list.txt"
-TEST_PATH = DATA_DIR / "test_list.txt"
+TRAIN_VAL_PATH = METADATA_DIR / "train_val_list.txt"
+TEST_PATH = METADATA_DIR / "test_list.txt"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 RANDOM_STATE = 42
