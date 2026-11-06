@@ -1,0 +1,16 @@
+# Python version: 3.14.3
+
+# Data processing and analysis
+numpy==2.5.4
+pandas==3.1.0
+scikit-learn==1.9.1
+matplotlib==3.11.2
+Pillow==13.0.0
+
+# Deep learning
+torch==2.15.0
+torchvision==0.29.2
+
+# Jupyter notebooks
+jupyter==1.1.1
+ipykernel==7.4.0
