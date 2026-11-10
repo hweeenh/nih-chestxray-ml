@@ -63,6 +63,12 @@ cnn/
 
 The dataset preparation and image preprocessing scripts are shared at the repository level in `src/data/`.
 
+## Notebooks
+
+1. [CNN Basics](notebooks/01_cnn_basics.ipynb)
+2. [Image Augmentation](notebooks/02_image_augmentation.ipynb)
+3. [CNN Model Development](notebooks/03_cnn_model_development.ipynb)
+
 ## Environment and Dependencies
 
 This project uses Python and PyTorch.
