@@ -11,13 +11,15 @@ The main objective is to develop practical experience in medical image preproces
 
 ## Project Overview
 
-This repository contains experiments using different approaches to image classification:
+This repository explores binary chest X-ray classification using deep learning and machine learning approaches.
+
+The CNN is the primary project, with MLP and metadata-only experiments serving as supporting baselines.
 
 | Project | Description |
 |---|---|
-| [MLP](mlp/README.md) | A multilayer perceptron (MLP) baseline, with and without class weighting |
-| [CNN](cnn/README.md) | Convolutional neural network experiments, including class weighting and image augmentation |
-| [Tabular Baseline](tabular-baseline/README.md) | A metadata-only baseline for comparison |
+| [CNN — Main Project](cnn/README.md) | CNN architecture, image augmentation, class weighting and evaluation |
+| [MLP Baseline](mlp/README.md) | Multilayer perceptron baseline with and without class weighting |
+| [Tabular Baseline](tabular-baseline/README.md) | Metadata-only classification baseline |
 
 The MLP and CNN experiments use the same preprocessed images and patient-level training, validation, and test splits, allowing their performance to be compared on a consistent dataset.
 
@@ -44,40 +46,62 @@ Patient-level splitting was used to separate the training, validation, and test 
 
 The original images, metadata, split files, and processed datasets are not included in this repository due to their size. Users should obtain the required files directly from the official NIH ChestX-ray14 dataset source and follow the preparation instructions in this repository.
 
-**Dataset source:** [NIH ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-Nihil)
+**Dataset source:** [NIH ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC)
 
 ## Repository Structure
 
-```text
 nih-chestxray-ml/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
 ├── src/
 │   ├── data/
+│   │   ├── inspect_dataset.py
+│   │   ├── inspect_images.py
+│   │   ├── visualize_samples.py
+│   │   ├── preprocess_images.py
+│   │   └── prepare_dataset.py
+│   │
 │   └── utils/
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── metadata/
-├── mlp/
-│   ├── notebooks/
-│   ├── results/
-│   ├── src/
-│   └── README.md
+│
 ├── cnn/
+│   ├── README.md
 │   ├── notebooks/
-│   ├── src/
-│   └── README.md
+│   │   ├── 01_cnn_basics.ipynb
+│   │   ├── 02_image_augmentation.ipynb
+│   │   └── 03_cnn_model_development.ipynb
+│   └── src/
+│       └── cnn_model.py
+│
+├── mlp/
+│   ├── README.md
+│   ├── notebooks/
+│   │   └── 01_mlp_model_development.ipynb
+│   └── src/
+│       └── mlp_model.py
+│
 ├── tabular-baseline/
-│   └── README.md
-├── requirements.txt
-└── README.md
-```
+│   ├── README.md
+│   └── nih_cxr_tabular_baseline.ipynb
+│
+├── pandas-eda/
+│   ├── README.md
+│   └── NIH_Chestxray14_Pandas_EDA.ipynb
+│
+└── sql-eda/
+    ├── README.md
+    └── eda.py
+
+**Note:** The `data/` directory is excluded from Git and is not included in this repository. It is created locally when setting up the project and contains the downloaded raw NIH ChestX-ray14 files, metadata, and processed datasets. Refer to the Dataset and Getting Started sections for instructions on obtaining and preparing the required files.  
 
 ## Getting Started
 
 ### 1. Clone the repository
 
 ```bash
-git clone <https://github.com/hweeenh/nih-chestxray-ml.git>
+git clone https://github.com/hweeenh/nih-chestxray-ml.git
 cd nih-chestxray-ml
 ```
 
@@ -135,7 +159,7 @@ Refer to each project's README for its architecture, experiments, evaluation res
 
 The experiments explored the effect of class weighting and image augmentation on minority-class detection.
 
-The weighted CNN achieved higher accuracy and precision than the weighted MLP on the held-out test set, while the weighted MLP achieved higher recall. Both models achieved similar F1-scores.
+The augmented and weighted CNN achieved higher accuracy, precision, and F1-score than the weighted MLP on the held-out test set, while the weighted MLP achieved higher recall.
 
 These findings highlight the importance of evaluating multiple performance metrics when working with imbalanced medical image datasets, rather than relying on accuracy alone.
 

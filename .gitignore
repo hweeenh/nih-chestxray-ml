@@ -12,11 +12,11 @@ sql-eda/*.csv
 
 # Python virtual environments
 **/.venv/
-.venv/
 
 # Python generated files
 __pycache__/
 *.py[cod]
+*.egg-info/
 
 # Jupyter generated files
 .ipynb_checkpoints/
