@@ -125,6 +125,12 @@ Open the notebooks in VS Code or Jupyter and execute the cells in order after co
 
 Refer to each project's README for its architecture, experiments, evaluation results, and specific instructions.
 
+## Experiments
+
+- [CNN — Main Project](cnn/README.md)
+- [MLP Baseline](mlp/README.md)
+- [Tabular Baseline](tabular-baseline/README.md)
+
 ## Key Findings
 
 The experiments explored the effect of class weighting and image augmentation on minority-class detection.
