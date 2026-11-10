@@ -33,7 +33,7 @@ The CNN project uses the same dataset and preprocessing pipeline as the MLP base
 | `test_list.txt` | Official test image list |
 | `images_001.tar.gz` | Chest X-ray image archive (part 1) |
 
-**Original dataset source:** [NIH ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737)
+**Original dataset source:** [NIH ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC)
 
 ### Dataset scope and preprocessing
 
