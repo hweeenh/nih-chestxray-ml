@@ -66,6 +66,22 @@ nih-chestxray-ml/
 │   │
 │   └── utils/
 │
+├── transfer-learning-resnet/
+│   ├── README.md
+│   ├── notebooks/
+│   │   ├── 01_resnet_basics.ipynb
+│   │   ├── 02_data_exploration.ipynb
+│   │   ├── 03_data_preprocessing.ipynb
+│   │   ├── 04_scratch_cnn.ipynb
+│   │   ├── 05_resnet18_transfer_learning.ipynb
+│   │   └── 06_scratch_vs_resnet18_ evaluation.ipynb
+│   ├── models/
+│   │   ├── resnet18_best.pth
+│   │   └── scratch_cnn_best.pth
+│   └── src/
+│       ├── data_loader.py
+│       ├── transforms.py
+│       └── models.py
 ├── cnn/
 │   ├── README.md
 │   ├── notebooks/
